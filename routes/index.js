@@ -33,6 +33,17 @@ router.post("/update-player", (req, res) => {
   );
 });
 
+router.get("/find-player", (req, res) => {
+  userController.find({ name: req.body.name }, (err, details) => {
+    if (err) {
+      return res.send({ response: err });
+    }
+    res.json({
+      response: details,
+    });
+  });
+});
+
 router.delete("/delete-player", (req, res) => {
   userController.findOneAndRemove(
     { name: req.body.name },

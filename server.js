@@ -23,5 +23,5 @@ mongo.then(
 );
 
 app.listen(3000, function () {
-  console.log("Example app listening on 3000 port");
+  console.log("App listening on 3000 port");
 });
