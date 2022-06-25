@@ -11,6 +11,8 @@ router.post("/add-player", async (req, res) => {
     if (err) {
       return res.send({ response: err });
     }
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
     res.send({
       response: userResponse,
     });
@@ -26,6 +28,8 @@ router.post("/update-player", (req, res) => {
       if (err) {
         return res.send({ response: err });
       }
+      res.setHeader("Content-Type", "application/json");
+      res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
       res.send({
         response: updatedUser,
       });
@@ -38,6 +42,8 @@ router.get("/find-player", (req, res) => {
     if (err) {
       return res.send({ response: err });
     }
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
     res.json({
       response: details,
     });
@@ -51,6 +57,9 @@ router.delete("/delete-player", (req, res) => {
       if (err) {
         return res.send({ response: err });
       }
+      res.setHeader("Content-Type", "application/json");
+      res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+
       res.send({
         response: deletedUser,
       });
@@ -63,6 +72,8 @@ router.get("/list-all-players", (req, res) => {
     if (err) {
       return res.send({ response: err });
     }
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
     res.json({
       response: details,
     });
@@ -74,6 +85,8 @@ router.get("/find-who-has-scored-more-runs", (req, res) => {
     if (err) {
       return res.send({ response: err });
     }
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
     res.json({
       response: details,
     });
@@ -85,6 +98,8 @@ router.get("/find-who-played-most-of-the-innings", (req, res) => {
     if (err) {
       return res.send({ response: err });
     }
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
     res.json({
       response: details,
     });
@@ -96,6 +111,8 @@ router.get("/find-who-played-least-number-of-balls", (req, res) => {
     if (err) {
       return res.send({ response: err });
     }
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
     res.json({
       response: details,
     });
@@ -107,6 +124,8 @@ router.get("/find-most-to-fewest-boundary-sixes", (req, res) => {
     if (err) {
       return res.send({ response: err });
     }
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
     res.json({
       response: details,
     });
@@ -118,6 +137,8 @@ router.get("/find-highest-batting-strike-rate", (req, res) => {
     if (err) {
       return res.send({ response: err });
     }
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
     res.json({
       response: details,
     });
